@@ -112,7 +112,7 @@ h6 {
     height: 100vh;
     width: var(--sidebar-width);
     background: var(--primary);
-    color: #fff
+    color: #fff;
 }
 .header .site-title {
     color:var(--white);
