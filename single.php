@@ -10,7 +10,9 @@
 		if( have_posts() ) {
 			while( have_posts() ) {
 				the_post();
-				the_content();
+				
+                //1st parameter is url, 2nd parameter is the hyphenated parameter
+                get_template_part( 'template-parts/content', 'article' );
 			}
 		}
 		
