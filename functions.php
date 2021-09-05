@@ -1,5 +1,6 @@
 <?php
 
+//function to add support for various elements to the theme
 function followandrew_theme_support() {
     //Adds dynamic title tag support
     add_theme_support('title-tag');
@@ -7,8 +8,10 @@ function followandrew_theme_support() {
     add_theme_support('post-thumbnails');
 }
 
+//Add the function to the theme
 add_action('after_setup_theme','followandrew_theme_support');
 
+//Put the menu on the page and enable it to be rendered dynamically through wordpress
 function followandrew_menus(){
     $locations = array(
         'primary' => "Desktop Primary Left Sidebar",
@@ -23,6 +26,7 @@ function followandrew_menus(){
 add_action('init', 'followandrew_menus');
 
 
+//Render the stylesheets dynamically
 function followandrew_register_styles() {
 
     $version = wp_get_theme()->get( 'Version' );
@@ -34,6 +38,8 @@ function followandrew_register_styles() {
 
 add_action( 'wp_enqueue_scripts', 'followandrew_register_styles');
 
+
+//Render the scripts dynamically
 function followandrew_register_scripts() {
 
     wp_enqueue_script('followandrew-jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
