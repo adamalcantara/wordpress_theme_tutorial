@@ -1,3 +1,4 @@
+<!-- Getting the header dynamically -->
 <?php
 		get_header();
 	
@@ -28,7 +29,7 @@
 	    
 
     
-    
+    <!-- Getting the footer dynamically -->
 	<?php
 		get_footer();
 	?>
