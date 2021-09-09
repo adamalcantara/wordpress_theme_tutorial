@@ -1,11 +1,13 @@
+<!-- Get the header dynamically -->
 <?php
 		get_header();
 	
 	?>
     
-    
+        <!-- Article tag which contains the content -->
 		<article class="content px-3 py-5 p-md-5">
 	    
+        <!-- PHP to get content from Wordpress -->
 		<?php
 		if( have_posts() ) {
 			while( have_posts() ) {
@@ -21,7 +23,7 @@
 	    </article>
 	    
     
-    
+    <!-- Get the footer dynamically -->
 	<?php
 		get_footer();
 	?>
